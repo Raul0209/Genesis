@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "1da27220-1360-487e-843b-85b3e4b4e82c",
+		"name": "Genesis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6616173"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "All Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/cliente/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"cliente",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/cliente/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\",\n    \"dpi\": \"2800288490102\",\n    \"nombreCompleto\": \"Sergio Leonel Gomez Arango\",\n    \"fechaNacimiento\": \"2002-12-06T06:00:00.000+00:00\",\n    \"direccion\": \"Direccion falsa\",\n    \"telefono\": \"55555555\",\n    \"estadoCivil\": \"S\",\n    \"fechaRegistro\": \"2024-01-17T20:27:01.000+00:00\",\n    \"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/cliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"dpi\": \"2800288490102\",\n    \"nombreCompleto\": \"Sergio Leonel Gomez Arango\",\n    \"fechaNacimiento\": \"2002-12-06T06:00:00.000+00:00\",\n    \"direccion\": \"Direccion falsa\",\n    \"telefono\": \"55555555\",\n    \"estadoCivil\": \"S\",\n    \"fechaRegistro\": \"2024-01-17T20:27:01.000+00:00\",\n    \"estado\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/cliente",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prestamos",
+			"item": [
+				{
+					"name": "All prestamos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/prestamo/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"prestamo",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prestamo By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/prestamo/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"prestamo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Prestamo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 0,\n    \"codigoDePrestamo\": \"sd\",\n    \"codigoDeCliente\": \"sd3\",\n    \"monto\": 5600.0,\n    \"cantidadDeCuotas\": 12,\n    \"fechaDeRegistro\": \"2024-01-18T00:08:42.000+00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/prestamo",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"prestamo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Plan Pago",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/service/v1/prestamo/generar-plan-pago/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"service",
+								"v1",
+								"prestamo",
+								"generar-plan-pago",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

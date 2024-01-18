@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+
+<h1>Detalle cliente</h1>
+
+
+<div class="container">
+  <form #formCliente="ngForm" class="example-form">
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>ID</mat-label>
+      <input disabled [(ngModel)]="cliente.id" #id="ngModel" name="id" matInput value="1">
+    </mat-form-field>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>DPI</mat-label>
+            <input [(ngModel)]="cliente.dpi" #dpi="ngModel" name="dpi" matInput>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Nombre Completo</mat-label>
+            <input [(ngModel)]="cliente.nombreCompleto" #nombreCompleto="ngModel" name="nombreCompleto" matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <!--   todo Cambiar a datepicker-->
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input  [(ngModel)]="cliente.fechaNacimiento" #fechaNacimiento="ngModel" name="fechaNacimiento" matInput [matDatepicker]="pickerFechaNacimiento">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="pickerFechaNacimiento"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFechaNacimiento></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Direccion</mat-label>
+        <textarea [(ngModel)]="cliente.direccion" #direccion="ngModel" name="direccion" matInput></textarea>
+      </mat-form-field>
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+
+        <td>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Telefono</mat-label>
+            <input [(ngModel)]="cliente.telefono" #telefono="ngModel" name="telefono" matInput
+                   placeholder="Ex. San Francisco">
+          </mat-form-field>
+        </td>
+
+        <!--        todo cambiar a select-->
+        <td>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Estado civil</mat-label>
+            <input [(ngModel)]="cliente.estadoCivil" #estadoCivil="ngModel" name="estadoCivil" matInput
+                   placeholder="Ex. California">
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-form-field appearance="outline">
+            <mat-label>Fecha de registro</mat-label>
+            <input  [(ngModel)]="cliente.fechaRegistro" #fechaRegistro="ngModel" name="fechaRegistro" matInput [matDatepicker]="pickerFechaRegistro">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="pickerFechaRegistro"></mat-datepicker-toggle>
+            <mat-datepicker #pickerFechaRegistro></mat-datepicker>
+          </mat-form-field>
+        </td>
+      </tr>
+
+    </table>
+
+    <button (click)="guardar()" mat-raised-button color="primary">Guardar</button>
+  </form>
+</div>
